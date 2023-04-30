@@ -147,6 +147,18 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void nextStation0() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(9);
+
+        radio.next();
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 
     @Test                                 //3 условие
     public void prevStation() {
@@ -282,4 +294,30 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void settingVolumeExcess() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(15);
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void settingVolumeBelow() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(-3);
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
 }

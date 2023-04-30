@@ -17,7 +17,7 @@ class RadioNumberTest {
     }
 
     @Test
-    public void switchRadioboundaryValue() {
+    public void switchRadioBoundaryValue() {
         Radio radio = new Radio(100);
         radio.setCurrentStation(1);
 
@@ -28,7 +28,7 @@ class RadioNumberTest {
     }
 
     @Test
-    public void switchRadioboundaryValueNext() {
+    public void switchRadioBoundaryValueNext() {
         Radio radio = new Radio(30);
         radio.setCurrentStation(10);
 
